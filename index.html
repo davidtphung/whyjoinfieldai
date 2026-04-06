@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>David T Phung x FieldAI - Technical Program Manager</title>
+<meta name="description" content="David T Phung for FieldAI Technical Program Manager - Robotics & Autonomy. 7+ years delivering construction projects, ready to deploy the robots transforming how they get built.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0b0d;--bg2:#111218;--bg3:#181a22;
+--fg:#e8e9ed;--fg2:#9a9daa;
+--accent:#ff5733;--accent2:#ff7b5c;
+--green:#3ddc84;--blue:#5b9cf5;
+--mono:'Space Mono',monospace;
+--sans:'Instrument Sans',system-ui,sans-serif;
+--max:820px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+
+/* NAV */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,3rem);height:52px;background:rgba(10,11,13,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.topbar-brand{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--fg2)}
+.topbar-nav{display:flex;gap:1.5rem}
+.topbar-nav a{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg2);transition:color 0.2s}
+.topbar-nav a:hover{color:var(--accent)}
+
+/* SECTIONS */
+section{padding:clamp(4rem,8vw,7rem) clamp(1.5rem,4vw,3rem)}
+.inner{max-width:var(--max);margin:0 auto}
+.alt-bg{background:var(--bg2)}
+
+/* LABEL */
+.label{display:flex;align-items:center;gap:0.75rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem}
+.label::before{content:'';width:20px;height:1px;background:var(--accent)}
+
+/* HEADINGS */
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;letter-spacing:-0.02em;line-height:1.2;margin-bottom:1.5rem;color:var(--fg)}
+h2 em{font-style:normal;color:var(--accent)}
+
+/* HERO */
+.hero{padding-top:calc(52px + clamp(5rem,10vw,8rem));padding-bottom:clamp(4rem,8vw,6rem);min-height:100vh;display:flex;align-items:center}
+.hero .inner{width:100%}
+.hero-name{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-0.03em;line-height:1.15;margin-bottom:0.5rem}
+.hero-name span{color:var(--accent)}
+.hero-role{font-family:var(--mono);font-size:clamp(0.7rem,1.2vw,0.85rem);letter-spacing:0.12em;text-transform:uppercase;color:var(--fg2);margin-bottom:1.5rem}
+.hero-tagline{font-size:clamp(1rem,1.8vw,1.15rem);color:var(--fg2);max-width:620px;line-height:1.7;margin-bottom:2rem}
+.hero-tags{display:flex;flex-wrap:wrap;gap:0.5rem}
+.tag{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.1);border-radius:2px;color:var(--fg2);white-space:nowrap}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.hero .reveal:nth-child(1){transition-delay:0.05s}
+.hero .reveal:nth-child(2){transition-delay:0.15s}
+.hero .reveal:nth-child(3){transition-delay:0.25s}
+.hero .reveal:nth-child(4){transition-delay:0.35s}
+.hero .reveal:nth-child(5){transition-delay:0.45s}
+.hero .reveal:nth-child(6){transition-delay:0.55s}
+
+/* PROSE */
+.prose p{color:var(--fg2);margin-bottom:1.25rem;font-size:0.95rem}
+.prose strong{color:var(--fg);font-weight:600}
+
+/* CARD */
+.card{background:var(--bg3);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:2rem 2rem 2rem 2.5rem;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--accent),var(--blue))}
+.card p{color:var(--fg2);font-size:0.95rem;margin-bottom:1rem}
+.card p:last-child{margin-bottom:0}
+
+/* TABLE */
+.match-grid{display:grid;gap:1px;margin-top:1.5rem}
+.match-row{display:grid;grid-template-columns:1fr 1fr;gap:1px}
+.match-row.header{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent)}
+.match-cell{padding:1rem 1.25rem;font-size:0.88rem;color:var(--fg2);background:var(--bg3);line-height:1.6}
+.match-row.header .match-cell{background:transparent;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.08)}
+.match-row:not(.header):hover .match-cell{background:rgba(255,87,51,0.03)}
+.match-cell:first-child{color:var(--fg);font-weight:500}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:1.5rem}
+.stat{background:var(--bg3);padding:1.75rem 1.5rem;text-align:center}
+.stat-num{font-size:clamp(1.6rem,3vw,2rem);font-weight:700;color:var(--fg);letter-spacing:-0.02em;margin-bottom:0.35rem}
+.stat-num .accent{color:var(--accent)}
+.stat-desc{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--fg2);line-height:1.6}
+
+/* WHY LIST */
+.why-list{list-style:none;counter-reset:why}
+.why-list li{counter-increment:why;padding:1.25rem 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;gap:1rem;align-items:baseline;font-size:0.95rem;color:var(--fg2)}
+.why-list li::before{content:counter(why,decimal-leading-zero) ".";font-family:var(--mono);font-size:0.75rem;color:var(--accent);letter-spacing:0.08em;flex-shrink:0;min-width:2rem}
+.why-list li strong{color:var(--fg);font-weight:600}
+
+/* TOOLS */
+.tools-wrap{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem}
+.cred-line{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg2)}
+
+/* CTA */
+.cta-section{text-align:center;padding:clamp(5rem,10vw,8rem) clamp(1.5rem,4vw,3rem)}
+.cta-section h2{font-size:clamp(1.4rem,3vw,2rem)}
+.cta-sub{color:var(--fg2);font-size:0.95rem;margin-bottom:2rem}
+.cta-btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.85rem 2rem;background:var(--accent);color:#fff;border-radius:3px;transition:background 0.2s,transform 0.15s}
+.cta-btn:hover{background:var(--accent2);transform:translateY(-1px)}
+.cta-links{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+.cta-links a{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--fg2);padding:0.5rem 1rem;border:1px solid rgba(255,255,255,0.1);border-radius:2px;transition:border-color 0.2s,color 0.2s}
+.cta-links a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* FOOTER */
+footer{text-align:center;padding:2rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--fg2);border-top:1px solid rgba(255,255,255,0.06)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .topbar-nav{gap:1rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .match-row{grid-template-columns:1fr}
+  .match-cell:first-child{border-bottom:none;padding-bottom:0.25rem;font-size:0.85rem}
+  .match-cell:last-child{padding-top:0.25rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+  .match-row.header{display:none}
+  .hero{min-height:auto;padding-top:calc(52px + 3rem)}
+  .card{padding:1.5rem 1.5rem 1.5rem 2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topbar">
+  <div class="topbar-brand">David T Phung x FieldAI</div>
+  <div class="topbar-nav">
+    <a href="#thesis">Thesis</a>
+    <a href="#numbers">Numbers</a>
+    <a href="#match">Match</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="inner">
+    <div class="reveal"><div class="label">Campaign Site</div></div>
+    <div class="reveal"><h1 class="hero-name">David T Phung &rarr; <span>FieldAI</span></h1></div>
+    <div class="reveal"><p class="hero-role">Technical Program Manager - Robotics &amp; Autonomy</p></div>
+    <div class="reveal"><p class="hero-tagline">I've spent 7 years delivering construction projects. Now I want to deploy the robots that are transforming how those projects get built.</p></div>
+    <div class="reveal">
+      <div class="hero-tags">
+        <span class="tag">Los Angeles, CA</span>
+        <span class="tag">B.Arch, Woodbury</span>
+        <span class="tag">U.S. Citizen</span>
+        <span class="tag">Ability to Travel</span>
+        <span class="tag">Available Now</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NARRATIVE -->
+<section class="alt-bg" id="background">
+  <div class="inner reveal">
+    <div class="label">Background</div>
+    <h2>I know what happens on a <em>construction site</em>.</h2>
+    <div class="prose">
+      <p>I studied architecture. My B.Arch trained me to read MEP drawings, evaluate constructability, and think in systems. That foundation is why I understand what it means to deploy technology where steel, concrete, and trades converge, and why robots on active jobsites need someone who speaks both languages.</p>
+      <p>At <strong>Gruen Associates</strong>, I spent 5 years managing 4 commercial construction projects totaling over $25M. Luxury retail tenant improvements across Southern California, coordinating 20+ consultants, 4 general contractors, and 3 government agencies. I held the line at a <strong>3% change order rate</strong> against an industry average of 8-12%, with zero litigation and a 95% on-time delivery rate.</p>
+      <p>Then I built something from scratch. <strong>Happy Friday Coffee</strong> was a commercial kitchen I took from permit to production: Type I hoods, Ansul fire suppression, walk-in coolers, heavy electrical. I didn't just build it, I operated it, scaling throughput from 250 to <strong>1,400 units per week</strong>, a 460% increase, while managing food safety compliance and a growing team.</p>
+      <p>At <strong>Entertainment Partners</strong>, I led a 10-engineer product release train for a platform serving 1 million+ users. We maintained <strong>99.98% uptime</strong>, consolidated 12 APIs, and ran a 7-region portfolio with 40+ stakeholders. I brought construction rigor to software delivery.</p>
+      <p>The TPM role at FieldAI sits at the exact intersection of everything I've done: construction delivery, field operations, cross-functional program management, and customer-facing technical execution.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THESIS -->
+<section id="thesis">
+  <div class="inner reveal">
+    <div class="label">Thesis</div>
+    <h2>Why FieldAI needs a <em>construction PM</em> as TPM.</h2>
+    <div class="card">
+      <p>FieldAI deploys robots on active construction sites. Your customers are GCs, superintendents, and project teams. They speak in submittals, RFIs, schedule float, and punchlist. A TPM who managed those projects from the other side understands the customer natively.</p>
+      <p><strong>I've run four of those projects simultaneously.</strong> I know what happens when a concrete pour slips, when an RFI stalls the MEP rough-in, when the inspector red-tags a fire suppression install. I've lived the problems your robots are solving.</p>
+      <p>The DPR case study shows FieldAI's system lets teams focus on detailed, critical tasks. That's exactly what I've spent my career optimizing: removing friction so teams can do their best work, whether that's a GC managing a $10M buildout or a field crew deploying autonomous equipment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSLATION TABLE -->
+<section class="alt-bg" id="translation">
+  <div class="inner reveal">
+    <div class="label">Translation</div>
+    <h2>My experience &rarr; <em>FieldAI's world</em>.</h2>
+    <div class="match-grid">
+      <div class="match-row header">
+        <div class="match-cell">What I've Done</div>
+        <div class="match-cell">FieldAI Equivalent</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Managed 4 simultaneous construction projects through design to closeout</div>
+        <div class="match-cell">Lead customer-focused robotics programs from inception through deployment</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Coordinated 20+ consultants across structural, MEP, civil, fire protection</div>
+        <div class="match-cell">Drive cross-functional execution across autonomy software, systems, hardware, data, ops</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Filed permits with 3 government agencies in parallel, saved 7 weeks</div>
+        <div class="match-cell">Manage project risks, dependencies, and tradeoffs for customer outcomes</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">1.8-day RFI turnaround vs 7-14 day industry average</div>
+        <div class="match-cell">Communicate project status, challenges, and mitigation plans to stakeholders</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Built facility, operated it, scaled 250 to 1,400 units/week</div>
+        <div class="match-cell">Oversee operational readiness and field deployments</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Led 10-engineer product release train, 99.98% uptime</div>
+        <div class="match-cell">Translate customer requirements into clear technical plans and milestones</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">7-region portfolio, 40+ stakeholder summit, standardized frameworks</div>
+        <div class="match-cell">Support on-site customer engagements (up to 30% travel)</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">$340K in change orders evaluated, $155K rejected with documentation</div>
+        <div class="match-cell">Act as trusted technical partner in high-stakes real-world deployments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="numbers">
+  <div class="inner reveal">
+    <div class="label">Proof</div>
+    <h2>Proof of <em>execution</em>.</h2>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">$25M<span class="accent">+</span></div>
+        <div class="stat-desc">Commercial construction managed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">95<span class="accent">%</span></div>
+        <div class="stat-desc">On-time delivery, zero litigation</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3<span class="accent">%</span></div>
+        <div class="stat-desc">CO rate vs 8-12% industry avg</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">460<span class="accent">%</span></div>
+        <div class="stat-desc">Throughput scaling, facility I built</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1.8 <span class="accent">days</span></div>
+        <div class="stat-desc">Average RFI turnaround</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">99.98<span class="accent">%</span></div>
+        <div class="stat-desc">Uptime on 1M-user platform</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS MATCH -->
+<section class="alt-bg" id="match">
+  <div class="inner reveal">
+    <div class="label">Requirements</div>
+    <h2>Every line in the job description. <em>Matched</em>.</h2>
+    <div class="match-grid">
+      <div class="match-row header">
+        <div class="match-cell">What FieldAI Needs</div>
+        <div class="match-cell">What I Bring</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Own customer-focused technical programs end to end</div>
+        <div class="match-cell">Managed 4 construction projects from design through closeout, each with distinct stakeholder groups and delivery timelines</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Drive cross-functional execution across engineering, ops, and product</div>
+        <div class="match-cell">Coordinated 20+ consultants (structural, MEP, civil, fire) and led a 10-engineer release train at Entertainment Partners</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Manage risks, dependencies, and tradeoffs</div>
+        <div class="match-cell">Evaluated $340K in change orders, rejected $155K with documentation. Filed permits across 3 agencies in parallel, saving 7 weeks</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Communicate status and mitigation plans to stakeholders</div>
+        <div class="match-cell">1.8-day RFI turnaround (industry avg: 7-14 days). Ran 40+ stakeholder summits across 7-region portfolio</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Translate customer requirements into technical plans</div>
+        <div class="match-cell">Converted owner requirements into construction documents, shop drawings, and execution sequences across $25M+ in projects</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Oversee field deployments and operational readiness</div>
+        <div class="match-cell">Built a commercial kitchen from permit to production, then operated it, scaling 250 to 1,400 units/week</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Support on-site customer engagements, up to 30% travel</div>
+        <div class="match-cell">Based in LA (FieldAI HQ region), managed jobsites across Southern California, available for travel</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">BS/MS in engineering, CS, or related field</div>
+        <div class="match-cell">B.Arch from Woodbury University, a 5-year professional degree covering structures, systems, and project delivery</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">5+ years in technical program management</div>
+        <div class="match-cell">7+ years across construction PM, facility operations, and software program management</div>
+      </div>
+      <div class="match-row">
+        <div class="match-cell">Experience in robotics, autonomy, or construction tech</div>
+        <div class="match-cell">Deep construction domain expertise, the deployment vertical FieldAI serves. I am the customer persona.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FIELDAI -->
+<section>
+  <div class="inner reveal">
+    <div class="label">Conviction</div>
+    <h2>Why this company. <em>Why now</em>.</h2>
+    <ol class="why-list">
+      <li><strong>Construction is the deployment vertical I know cold.</strong> I've managed the jobsites, the GCs, the submittals, the inspections. FieldAI's customer is my peer.</li>
+      <li><strong>Field Foundation Models represent a paradigm shift.</strong> Risk-aware, physics-first, no GPS or prior maps required. This is autonomy built for the real world, not lab conditions.</li>
+      <li><strong>DPR validated the model.</strong> When one of the industry's top GCs deploys your robots and reports that teams can focus on critical tasks, the product-market fit is proven.</li>
+      <li><strong>$400M+ raised, doubling headcount.</strong> This is the scale-up inflection point where program management separates companies that ship from companies that stall.</li>
+      <li><strong>Southern California HQ, global deployments.</strong> I'm based in LA, ready for onsite work and travel. The geography aligns.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="alt-bg">
+  <div class="inner reveal">
+    <div class="label">Tools &amp; Credentials</div>
+    <h2>Ready to <em>operate</em>.</h2>
+    <div class="tools-wrap">
+      <span class="tag">Procore</span>
+      <span class="tag">Bluebeam Revu</span>
+      <span class="tag">MS Project</span>
+      <span class="tag">PlanGrid</span>
+      <span class="tag">AutoCAD</span>
+      <span class="tag">GIS</span>
+      <span class="tag">Jira</span>
+      <span class="tag">Confluence</span>
+      <span class="tag">Google Suite</span>
+      <span class="tag">Excel</span>
+    </div>
+    <p class="cred-line">B.Arch Woodbury / U.S. Citizen / Los Angeles / Available 5 days/week onsite + travel</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="inner reveal">
+    <div class="label" style="justify-content:center">Let's Talk</div>
+    <h2>I've delivered the construction.<br>Let me <em>deploy the robots</em>.</h2>
+    <p class="cta-sub">Ready to discuss how construction PM experience translates to robotics program management.</p>
+    <a href="mailto:davidtphung@nlt143.energy" class="cta-btn">Email David &rarr;</a>
+    <div class="cta-links">
+      <a href="https://linkedin.com/in/davidtphung" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="tel:+1-your-number">Phone</a>
+      <a href="mailto:davidtphung@nlt143.energy">davidtphung@nlt143.energy</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>&copy; 2026 David T Phung / @davidtphung</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Smooth scroll for nav
+document.querySelectorAll('.topbar-nav a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
