@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="16" fill="#0a0b0d"/>
+  <!-- Construction crane arm morphing into robot arm -->
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Vertical mast -->
+    <line x1="32" y1="108" x2="32" y2="28" stroke="#ff5733" stroke-width="5"/>
+    <!-- Angled boom -->
+    <line x1="32" y1="32" x2="96" y2="32" stroke="#ff5733" stroke-width="5"/>
+    <!-- Hook/robot joint -->
+    <circle cx="96" cy="32" r="6" fill="none" stroke="#5b9cf5" stroke-width="3"/>
+    <!-- Robot arm segment going down -->
+    <line x1="96" y1="38" x2="96" y2="68" stroke="#5b9cf5" stroke-width="4"/>
+    <!-- Robot end effector / gripper -->
+    <line x1="86" y1="68" x2="96" y2="58" stroke="#5b9cf5" stroke-width="3"/>
+    <line x1="106" y1="68" x2="96" y2="58" stroke="#5b9cf5" stroke-width="3"/>
+    <!-- Base crosshatch (construction foundation) -->
+    <line x1="18" y1="108" x2="46" y2="108" stroke="#ff5733" stroke-width="5"/>
+    <!-- Small signal dots (autonomy/AI) -->
+    <circle cx="76" cy="50" r="2" fill="#3ddc84"/>
+    <circle cx="68" cy="44" r="1.5" fill="#3ddc84" opacity="0.7"/>
+    <circle cx="82" cy="56" r="1.5" fill="#3ddc84" opacity="0.5"/>
+  </g>
+  <!-- DTP initials subtle -->
+  <text x="64" y="100" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#9a9daa" text-anchor="middle" letter-spacing="3">DTP</text>
+</svg>
